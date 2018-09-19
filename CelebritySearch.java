@@ -40,15 +40,15 @@ package FBQuestions;
 public class CelebritySearch {
         public int findCelebrity(int n) {
             int celebrity=0;
+                
             for(int individual=1; individual<n;individual++){
                if(knows(celebrity,individual))
                    celebrity=individual;
             }
-
+                
             for(int individual=0; individual<n;individual++){
                 if(individual<celebrity && (!knows(individual,celebrity) || knows(celebrity,individual)))
                     return -1;
-
                 if(individual>celebrity && !knows(individual,celebrity))
                     return -1;
             }
