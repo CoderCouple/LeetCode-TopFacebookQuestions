@@ -33,25 +33,57 @@ package FBQuestions;
  *
  * QUESTIONS/ASSUMPTIONS:
  * ======================
- * 1)
+ * 1)Will there be always a celebrity present ?
+ * Ans: may/may not be
  *
  */
 
 public class CelebritySearch {
-        public int findCelebrity(int n) {
+
+        //one pointer approach
+        public int findCelebrity_I(int n) {
             int celebrity=0;
-                
             for(int individual=1; individual<n;individual++){
                if(knows(celebrity,individual))
                    celebrity=individual;
             }
-                
+
             for(int individual=0; individual<n;individual++){
                 if(individual<celebrity && (!knows(individual,celebrity) || knows(celebrity,individual)))
                     return -1;
+
                 if(individual>celebrity && !knows(individual,celebrity))
                     return -1;
             }
+
             return celebrity;
+        }
+
+
+    //Two pointer approach
+    public int findCelebrity(int n) {
+        int start=0;
+        int end=n-1;
+        while(start!=end){
+                if(knows(start,end))
+                    start++;
+                else end--;
+
+        }
+        int celebrity=start;
+        for(int individual=0; individual<n;individual++){
+            if(individual<celebrity && (!knows(individual,celebrity) || knows(celebrity,individual)))
+                return -1;
+
+            if(individual>celebrity && !knows(individual,celebrity))
+                return -1;
+        }
+
+        return celebrity;
+    }
+
+
+        public boolean knows(int a , int b){
+            return true;
         }
 }
