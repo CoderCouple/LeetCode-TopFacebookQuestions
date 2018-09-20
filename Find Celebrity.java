@@ -40,7 +40,7 @@ package FBQuestions;
 
 public class CelebritySearch {
 
-        //one pointer approach
+        //==========================================One Pointer Approach============================================//
         public int findCelebrity_I(int n) {
             int celebrity=0;
             for(int individual=1; individual<n;individual++){
@@ -60,7 +60,7 @@ public class CelebritySearch {
         }
 
 
-    //Two pointer approach
+    //==========================================Two Pointer Approach============================================//
     public int findCelebrity(int n) {
         int start=0;
         int end=n-1;
