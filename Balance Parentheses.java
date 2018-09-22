@@ -1,7 +1,40 @@
 package FBQuestions;
 
-import java.util.Arrays;
 import java.util.Stack;
+
+/**
+ * QUESTION:
+ * =========
+ * Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+ * Note: The input string may contain letters other than the parentheses ( and ).
+ *
+ * Example 1:
+ * Input: "()())()"
+ * Output: ["()()()", "(())()"]
+ *
+ * Example 2:
+ * Input: "(a)())()"
+ * Output: ["(a)()()", "(a())()"]
+ *
+ * Example 3:
+ * Input: ")("
+ * Output: [""]
+ *
+ * SOLUTION:
+ * =========
+ * It seems a simple stack based problem. but the key is that this problem can be solved with out stack in a more efficient manner.
+ *
+ * LEETCODE REFERENCE: 301. Remove Invalid Parentheses  32. Longest Valid Parentheses
+ * ===================
+ *
+ * https://leetcode.com/problems/remove-invalid-parentheses/description/
+ * https://leetcode.com/problems/longest-valid-parentheses/description/
+ *
+ * QUESTIONS/ASSUMPTIONS:
+ * ======================
+ *
+ *
+ */
 
 public class BalanceParentheses {
 
