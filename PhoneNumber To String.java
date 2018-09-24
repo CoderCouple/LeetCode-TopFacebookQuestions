@@ -33,6 +33,8 @@ import java.util.*;
  */
 public class PhoneNumberToString {
 
+        //TC : O(M * N) [M * N =  Number of Alternative for each digit Digits , M= Number of Digits, N= No Of characters for Digit]
+        //SC : O(M) [M:  Number of Digits = Maximum depth of tree]
         public List<String> letterCombinations(String digits, Map<Character,String> map) {
 
             List<String> result = new ArrayList<>();
@@ -58,7 +60,8 @@ public class PhoneNumberToString {
             }
         }
 
-
+    //TC : O(M * N) [M * N =  Number of Alternative for each digit Digits , M= Number of Digits, N= No Of characters for Digit]
+    //TC : O(M * N) [M * N =  Number of Alternative for each digit Digits , M= Number of Digits, N= No Of characters for Digit]
     public List<String> letterCombinationsIterative(String digits,Map<Character,String> map) {
 
         Queue<String> queue = new LinkedList<String>();
