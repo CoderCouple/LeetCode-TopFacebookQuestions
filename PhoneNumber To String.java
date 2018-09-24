@@ -28,8 +28,18 @@ import java.util.*;
  *
  * QUESTIONS/ASSUMPTIONS:
  * ======================
+ * 
+ * Follow Up Questions:
+ * ====================
+ * 1) Total No of solution ?
+ * Ans: M * N 
+ * [M * N =  Number of Alternative for each digit Digits , M= Number of Digits, N= No Of characters for Digit]
  *
+ * 2) Will each solution be unique ?
+ * Ans: Yes
  *
+ * 3) How will you design an automated checking for it ?
+ * Ans: Each letter in the answer should map back to the digits in the given input string.(Reverse mapping)
  */
 public class PhoneNumberToString {
 
